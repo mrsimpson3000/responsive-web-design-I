@@ -115,3 +115,18 @@ header a {
 .mid-bottom div {
   width: 30%;
 }
+
+/* Bottom Section */
+.bottom {
+  width: 25%;
+  padding: 0 5%;
+}
+
+.bottom p {
+  padding-bottom: 10%;
+}
+
+footer {
+  text-align: center;
+  padding: 5% 0;
+}

@@ -86,7 +86,6 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  /* border: 0; */
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -134,6 +133,7 @@ table {
   border-spacing: 0;
 }
 
+/* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
@@ -141,7 +141,7 @@ table {
 html,
 body {
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 h1,
@@ -149,190 +149,252 @@ h2,
 h3,
 h4,
 h5 {
-  font-size: 18px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
   margin-bottom: 15px;
-  font-family: 'Rubik', sans-serif;
 }
 
-p {
-  line-height: 1.4;
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+* {
+  max-width: 100%;
+  /* border: 1px solid black; */
 }
 
-header {
+body {
+  padding: 0 5%;
+}
+
+hr {
+  width: 90%;
+}
+
+/* Home section */
+nav {
   display: flex;
-  flex-direction: column;
-  padding: 2% 0;
+  height: 60px;
+  align-items: center;
+  padding: 5%;
 }
 
-.navbar {
+nav .links {
+  width: 67%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .links a {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 18px;
+}
+
+nav .image {
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav img {
+  height: 45px;
+}
+
+/* Innovation section */
+#innovation {
+  height: 600px;
   width: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 3% 0;
-}
-
-nav {
-  flex-grow: 1;
-  display: flex;
   justify-content: space-evenly;
+  padding: 5%;
 }
 
-nav a {
-  text-decoration: none;
-  color: black;
-}
-
-.container {
-  width: 800px;
-  margin: 0 auto;
-}
-
-.top-content {
+#innovation .get-started {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
-  border-bottom: 1px dashed black;
-}
-
-.top-content .text-container {
-  width: 48%;
-  padding: 0 1%;
-  padding-bottom: 20px;
-}
-
-.middle-content {
-  margin-bottom: 20px;
-  border-bottom: 1px dashed black;
-}
-
-.middle-content h2 {
-  padding: 0 2%;
-  margin-bottom: 0;
-}
-
-.middle-content .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.middle-content .boxes .box {
-  width: 12.5%;
-  height: 100px;
-  /* background: black; */
-  margin: 20px 2.5%;
-  color: white;
-  display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
-.bottom-content {
+#innovation .get-started h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+#innovation .get-started .inner {
   display: flex;
-  margin: 0 2% 20px;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.bottom-content .text-container {
-  padding-right: 4%;
+#innovation .image img {
+  height: 450px;
+  width: 450px;
 }
 
-.bottom-content .text-container:last-child {
-  padding-right: 0;
-}
-
-footer {
-  width: 100%;
-  background: black;
-}
-
-footer nav {
+#innovation .get-started .inner button {
+  padding: 10px 0;
+  font-size: 20px;
   width: 60%;
+}
+
+/* Top Section of next 3 sections */
+#top {
+  font-size: 24px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 2%;
-  font-size: 14px;
+  padding: 5%;
 }
 
-footer nav a {
-  color: white;
-  text-decoration: none;
+#top .features {
+  width: 48%;
 }
 
-.box1 {
-  background-color: teal;
+#top .about {
+  width: 48%;
 }
 
-.box2 {
-  background-color: gold;
+/* Middle Section */
+#middle img {
+  padding: 0 5%;
+  padding-bottom: 5%;
+  width: 100%;
 }
 
-.box3 {
-  background-color: cadetblue;
+/* Bottom Section */
+#bottom {
+  font-size: 24px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.box4 {
-  background-color: coral;
+#bottom div {
+  text-align: left;
+  padding: 0 1%;
+  padding-bottom: 5%;
 }
 
-.box5 {
-  background-color: crimson;
+/* Contact Section */
+#contact {
+  font-size: 24px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 30%;
 }
 
-.box6 {
-  background-color: forestgreen;
+#contact p {
+  padding: 2% 0;
 }
 
-.box7 {
-  background-color: darkorchid;
+/* The Footer */
+footer p {
+  text-align: center;
+  font-size: 20px;
+  padding: 5% 0;
 }
 
-.box8 {
-  background-color: hotpink;
+/* Services Page Since I Didn't do a great job with my naming */
+#services {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 5%;
 }
 
-.box9 {
-  background-color: indigo;
+#services h2 {
+  font-size: 28px;
 }
 
-.box10 {
-  background-color: dodgerblue;
+#services p {
+  font-weight: bold;
+  padding-bottom: 5%;
+  line-height: 20px;
 }
 
-.about {
-  padding-right: 3%;
-  padding-left: 3%;
-  padding-bottom: 3%;
-  border-bottom: 1px black dashed;
-}
-
-.learn-more {
+/* Our Services Section */
+#our-services {
+  box-sizing: border-box;
+  margin: 5%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: space-between;
+  border-bottom: black 2px solid;
 }
 
-.learn-group {
-  margin: 3%;
+#our-services div {
   box-sizing: border-box;
-  border-bottom: 1px black dashed;
-  width: 44%;
+  border: 1px solid black;
+  padding: 2%;
+  background-color: whitesmoke;
+  width: 47.25%;
+  margin-bottom: 5%;
 }
 
-.together {
-  padding: 5% 3%;
+#our-services h3 {
+  font-size: 20px;
 }
 
-.learn-group img {
-  width: 100%;
-  object-fit: contain;
+#our-services p {
+  font-weight: bold;
+  line-height: 20px;
+  padding-bottom: 2%;
 }
 
-.learn-group button {
-  padding: 2% 5%;
-  margin: 4% 0;
+#our-services div button {
   border-radius: 8px;
+  margin-top: 2%;
+  padding: 2% 8%;
+}
+
+/* Facts Section */
+#facts {
+  display: flex;
+  width: 100%;
+}
+
+#facts .outer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 0 5%
+}
+
+#facts .inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#facts h3 {
+  font-size: 20px;
+}
+
+#facts p {
+  font-weight: bold;
+  line-height: 20px;
+  padding-bottom: 2%;
+}
+
+#facts ul {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#facts li {
+  font-weight: bold;
+  line-height: 20px;
+  padding-bottom: 2%;
+  list-style-type: square;
+}
+
+
+/* Footer Section */
+footer p {
+  font-weight: bold;
+  padding-top: 10%;
 }

@@ -152,7 +152,14 @@ footer {
   }
 
   .top {
+    flex-flow: row nowrap;
+    justify-content: center;
     padding: 10% 0px;
+  }
+
+  .top .get-started {
+    justify-content: center;
+    padding-left: 0px;
   }
 
   .top img {
@@ -161,4 +168,27 @@ footer {
   }
 }
 
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+  header {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+
+  header a {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding: 3% 0;
+  }
+}

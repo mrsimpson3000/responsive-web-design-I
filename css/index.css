@@ -84,7 +84,7 @@ header a {
 
 .top img {
   height: 450px;
-  width: auto;
+  width: 450px;
 }
 
 /* Middle Section */
@@ -97,7 +97,12 @@ header a {
 
 .mid-top {
   display: flex;
+  justify-content: space-between;
   padding-bottom: 5%;
+}
+
+.mid-top div {
+  width: 48%;
 }
 
 .middle img {
@@ -130,3 +135,30 @@ footer {
   text-align: center;
   padding: 5% 0;
 }
+
+/* Media Queries */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  header nav {
+    padding: 0%;
+  }
+
+  header img {
+    padding-bottom: 5%;
+  }
+
+  .top {
+    padding: 10% 0px;
+  }
+
+  .top img {
+    display: none;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {}

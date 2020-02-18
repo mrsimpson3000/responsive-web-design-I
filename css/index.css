@@ -1,3 +1,205 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  /* Tells element, you can never be bigger than your parent */
+  /* border: 1px solid grey; */
+}
 
+/* General Styles */
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-right: 5%;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: gray;
+}
+
+/* Top Section */
+.top {
+  display: flex;
+  height: auto;
+  justify-content: space-evenly;
+  margin: 0 5%;
+  border-bottom: 2px solid black;
+  padding-left: 10%;
+  padding-bottom: 5%;
+}
+
+.top .get-started {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.top .image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top .inner {
+  padding-right: 5%;
+}
+
+.top h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.top button {
+  height: 35px;
+  width: 180px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.top img {
+  height: auto;
+  width: 100%;
+}
+
+/* .top div {
+  border: 1px solid blue;
+} */
+
+/* Middle Section */
+.middle {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  padding: 5%;
+}
+
+.mid-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+
+.mid-top div {
+  width: 48%;
+}
+
+.middle img {
+  padding-bottom: 5%;
+}
+
+.mid-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding-bottom: 5%;
+}
+
+.mid-bottom div {
+  width: 30%;
+}
+
+/* Bottom Section */
+.bottom {
+  width: 25%;
+  padding: 0 5%;
+}
+
+.bottom p {
+  padding-bottom: 10%;
+}
+
+footer {
+  text-align: center;
+  padding: 5% 0;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  header nav {
+    padding: 0%;
+  }
+
+  header img {
+    padding-bottom: 5%;
+  }
+
+  .top {
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 10% 0px;
+  }
+
+  .top .get-started {
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  .top img {
+    display: none;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+
+  header a {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding: 3% 0;
+  }
+}
